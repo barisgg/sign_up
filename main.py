@@ -29,7 +29,7 @@ def register():
     if not username:
         usernameError = "Username is required"
     if len(username) < 3 or len(username) > 20:
-        usernameError = "Username must be 3 to 20 characters long"
+        usernameError = "Username must be 3-20 characters long"
     for char in username:
         if char.isalpha() is False:
             usernameError = "Username can't contain a space"
@@ -37,7 +37,7 @@ def register():
     if not password:
         passwordError = "Password is required"
     elif len(password) < 3 or len(username) > 20:
-        passwordError = "Password must be 3 to 20 characters long"
+        passwordError = "Password must be 3-20 characters long"
     else:
         hasNumber = False
         for char in password:
@@ -65,8 +65,9 @@ def register():
         if char == " ":
             emailError = "Email can't contain a space"
     if len(email) < 3 or len(email) >20:
-        emailError = "Email must be between 3 to 20 characters long"
-    
+        emailError = "Email must be 3-20 characters long"
+    if not email:
+        emailError = ""
 
     
     if usernameError or passwordError or password2Error:

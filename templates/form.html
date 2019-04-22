@@ -2,6 +2,7 @@
     
     {% block body %}
     <h1>Sign Up</h1>
+    <div>
         <form action="/register" id="form" method="POST">
             <table>
                 <tbody>
@@ -10,7 +11,7 @@
                             <label for="username">Username</label>
                         </td>
                         <td>    
-                            <input type="text" name="username" id="username" value='{{username}}'/>
+                            <input type="text" name="username" id="username" value='{{username}}'/ required>
                             <span class="error">{{one}}</span>
                         </td>
                     </tr>
@@ -19,22 +20,22 @@
                             <label for="password">Password</label>
                         </td>
                         <td>
-                            <input type="password" name="password" id="password"/>
+                            <input type="password" name="password" id="password"/ required>
                             <span class="error">{{three}}</span>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <label for="password">Password Again</label>
+                            <label for="password">Password</label>
                         </td>
                         <td>
-                            <input type="password" name="password2" id="password2"/>
+                            <input type="password" name="password2" id="password2"/ required>
                             <span class="error">{{five}}</span>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <label for="email">Email (optional)</label>
+                            <label for="email">Email</label>
                         </td>
                         <td>
                             <input type="text" name="email" id="email" value='{{email}}'/>
@@ -45,4 +46,5 @@
             </table>
             <button type="submit">Register</button>
     </form>
+    </div>
     {% endblock %}
