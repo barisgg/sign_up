@@ -72,7 +72,8 @@ def register():
     if usernameError or passwordError or password2Error:
         print("there was an error!")
         content = jinja_env.get_template('form.html')
-        return content.render(email=email,emailError=emailError, username=username,one=usernameError,three=passwordError,five=password2Error)
+        return content.render(email=email,emailError=emailError, username=username,
+                            one=usernameError,three=passwordError,five=password2Error)
 
     validated = jinja_env.get_template('thanks.html')
     return validated.render(name=username)
