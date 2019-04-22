@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-5" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Validation Example</title>
+    <link rel="stylesheet" href="/static/app.css" />
+  </head>
+  <body>      
+    <h1>Sign Up</h1>
+        <form action="/register" id="form" method="POST">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="username">Username</label>
+                        </td>
+                        <td>    
+                            <input type="text" name="username" id="username" value='{{username}}'/>
+                            <span class="error">{{one}}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="password">Password</label>
+                        </td>
+                        <td>
+                            <input type="password" name="password" id="password"/>
+                            <span class="error">{{three}}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="password">Password Again</label>
+                        </td>
+                        <td>
+                            <input type="password" name="password2" id="password2"/>
+                            <span class="error">{{five}}</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="submit">Register</button>
+    </form>
+   </body>
+</html>
